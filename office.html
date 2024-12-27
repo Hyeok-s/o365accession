@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content: flex-start;">
+                <div class="col-md-1 pt-1 text-left">
+                    <div class="logo-container">
+                        <img id="Top1_imgLogo" src="images/ubelogo.png">
+                        <img id="Top2_imgLogo" src="images/office365.jpg">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- HEADER =============================-->
+    <!-- MainImg =============================-->
+    <main role="main" class="container">
+        <div id="ContentPlaceHolder1_pnlMainImg02" class="p-0 text-white rounded w-100 text-center mb-3">
+            <img src="images/main1.png" class="img-fluid rounded">
+        </div>
+        <!-- ABOUT =============================-->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="far fa-dot-circle"></i>
+                        <strong>Microsoft office 365</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Microsoft 365는 현대의 사용자들이 작업을 수행하는 방식에 가장 적합한 도구를 한데 모은 클라우드 기반 구독 서비스입니다. Excel,
+                            Outlook과 같은
+                            업계 최고의 앱과 OneDrive, Microsoft Teams와 같은 강력한 클라우드 서비스가 결합된 Microsoft 365를 이용하면
+                            누구든지
+                            언제 어디서나
+                            모든 디바이스에서 콘텐츠를 제작하고 공유할 수 있습니다.
+                            <br>
+                            재학중인 학생에게 최대 5대의 PC 또는 Mac에 전체 Office 응용 프로그램을 무료로 설치하도록 허용합니다.
+                        </p>
+                        <button id="signupButton" class="btn btn-info">
+                            <i class="fas fa-user-plus"></i>
+                            계정생성하기
+                        </button>              
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="far fa-dot-circle"></i>
+                        <strong>Microsoft office 365 시작하기</strong>
+                    </div>
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="images/login.jpg" alt="o365">
+                        <p class="card-text">
+                            계정을 생성했으면 아래 링크에서 로그인하세요.
+                        </p>
+                        <a href="https://portal.office.com" class="btn btn-info mb-1" target="_blank">Microsoft
+                            365
+                            시작하기</a>
+                        <a href="https://portal.office.com/OLS/MySoftware.aspx" class="btn btn-info mb-1"
+                            target="_blank">정품 Office 설치</a>
+                        <br>
+                        ※ 정품 Office 설치는 재학중인 학생만 가능합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </section>
+    </main>
+    <div class="copy">COPYRIGHT (C) 2024 JIT. ALL rights Reserved.</div>
+
+    <!-- SCRIPTS =============================-->
+    <script src="js/jquery-.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/anim.js"></script>
+    <script>
+        // URL에서 쿼리 파라미터 가져오기
+        //const urlParams = new URLSearchParams(window.location.search);
+        
+        // 쿼리 파라미터에서 값 추출하기
+        //const userID = urlParams.get('userID');
+        //const divide = urlParams.get('divide');
+        //const name = urlParams.get('name');
+
+
+
+
+        
+        const signupButton = document.getElementById('signupButton');
+        signupButton.addEventListener('click', function() {
+            // 버튼을 클릭했을 때 해당 URL로 이동
+            window.location.href = `/signup?userID=${userID}&divide=${divide}&name=${name}`;
+        });
+    </script>
+</body>
+
+</html>

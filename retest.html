@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retest</title>
+</head>
+<body>
+  <script>
+    // URL에서 쿼리 문자열을 추출합니다.
+    const queryString = window.location.search;
+    
+    // URL의 쿼리 문자열이 비어있는지 확인합니다.
+    if (queryString) {
+      // URL의 쿼리 문자열을 해석하여 객체로 변환합니다.
+      const params = new URLSearchParams(queryString);
+
+      // 세션 값들을 추출하여 변수에 저장합니다.
+      const userID = params.get('userID');
+      const divide = params.get('divide');
+      const name = params.get('name');
+
+      // 추출한 세션 값들을 활용하여 필요한 작업을 수행합니다.
+      console.log('User ID:', userID);
+      console.log('Divide:', divide);
+      console.log('Name:', name);
+
+      // 사용자 정보를 담은 객체 생성
+      const userData = { userID, divide, name };
+
+      // 서버로 POST 요청을 보냅니다.
+      const data = { userID, divide, name };
+
+    fetch('/office', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+    })
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('서버 응답이 실패했습니다.');
+    }
+    return response.json();
+    })
+    .then(data => {
+        console.log('서버로부터의 응답:', data);
+    // 원하는 동작 수행
+    })
+    .catch(error => {
+        console.error('오류 발생:', error);
+    });
+    } else {
+      // 쿼리 문자열이 없는 경우 에러 메시지를 표시합니다.
+      console.error('쿼리 문자열이 없습니다.');
+    }
+  </script>
+</body>
+</html>

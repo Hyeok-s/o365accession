@@ -1,0 +1,226 @@
+.content {
+    max-width: 1004px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.in {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.section_01 {
+    max-width: 1200px; /* 예시값 - 적절한 너비로 조정하세요 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px; /* 내부 여백 */
+    background-color: #f9f9f9; /* 배경색 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.title_style {
+    font-size: 24px; /* 제목 폰트 크기 */
+    color: #333; /* 제목 색상 */
+}
+
+.section_basic ul {
+    padding: 0;
+    margin: 0;
+}
+
+.section_basic li {
+    margin-bottom: 15px; /* 각 입력 요소 사이의 여백 */
+}
+
+
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; /* 라벨 아래 여백 추가 */
+}
+
+.int3, .int2, .int4 {
+    width: 500px; /* 입력란 너비 조정 */
+    padding: 10px; /* 내부 여백을 설정합니다. */
+    font-size: 16px; /* 폰트 크기를 조정합니다. */
+    margin-bottom: 10px; /* 입력란 아래 여백 추가 */
+}
+
+#userprincipalname {
+    width: 300px; /* 입력칸의 너비를 조정합니다. */
+    padding: 10px; /* 내부 여백을 설정합니다. */
+    font-size: 16px; /* 폰트 크기를 조정합니다. */
+}
+
+/* 각 입력 칸과 레이블 사이의 간격을 조정합니다. */
+.line {
+    margin-bottom: 20px; /* 간격을 설정합니다. */
+}
+
+.btn_st_10 {
+    background-color: #555; /* 버튼 배경색 */
+    color: #fff; /* 버튼 텍스트 색상 */
+    padding: 10px 20px; /* 버튼 내부 여백 */
+    border: none; /* 테두리 없음 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    cursor: pointer; /* 마우스 커서 모양 */
+}
+
+.btn_st_10:hover {
+    background-color: #444; /* 호버 시 배경색 변경 */
+}
+
+
+.snip1535 {
+    background-color: #ee6e41;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1em;
+    margin: 15px 40px;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    float: right;
+}
+
+.snip1535:before,
+.snip1535:after {
+    border-color: transparent;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-style: solid;
+    border-width: 0;
+    content: "";
+    height: 24px;
+    position: absolute;
+    width: 24px;
+}
+
+.snip1535:before {
+    border-color: #ee6e41;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    right: -5px;
+    top: -5px;
+}
+
+.snip1535:after {
+    border-bottom-width: 2px;
+    border-color: #ee6e41;
+    border-left-width: 2px;
+    bottom: -5px;
+    left: -5px;
+}
+
+.snip1535:hover,
+.snip1535.hover {
+    background-color: #ee6e41;
+}
+
+.snip1535:hover:before,
+.snip1535.hover:before,
+.snip1535:hover:after,
+.snip1535.hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+#loadingOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loadingSpinnerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#loadingSpinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #3498db;
+    border-top: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+#loadingText {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#loadingText span {
+    display: block;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.timg1{
+    height: auto;
+    width: auto;
+}
+
+.timg2 {
+    width: 225px;
+    height: 60px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pb-3, .py-3 {
+    padding-top: 1rem!important;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 992px){
+    .container {
+        max-width: 1200px;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/information.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+    <div class="container">
+		<header class="blog-header py-3">
+			<div class="row flex-nowrap justify-content:flex-start;">
+				<div class="col-md-1 pt-1 text-left">
+					<div class="logo-container">
+						<img class="timg1" src="images/ubelogo.png"  alt="Ube로고">
+						<img class="timg2" src="images/office365.jpg"  alt="Ube로고">
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+    <section class="subContents">
+        <div class="membership_info">
+            <div class="ly_box">
+                <div class="title">
+                    <h3 class="smaint">Office 365 회원가입</h3>
+                </div>
+                <ul class="join_step">
+                    <li>STEP1<strong>약관동의</strong></li>
+                    <li class="current">STEP2<strong>회원정보 입력</strong></li>
+                    <li>STEP3<strong>가입 완료</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <form id="userForm" action="/saveToAD" method="post">
+
+                <div class="section_01">
+                    <h4 class="title_style">정보입력</h4>
+                    <div class="section_basic">
+                        <ul>
+                            <li style="list-style: none;" class="line">
+                                <label for="school">학교</label>
+                                <p>
+                                    <span class="institution" id="institution" name="institution">뇌교육대학교</span>
+                                </p>
+                            </li>
+                            <li style="list-style: none;" class="line">
+                                <label for="loginId">로그인 ID</label>
+                                <p>
+                                    <span>
+                                        <input type="text" id="userprincipalname" class="int3" name="userprincipalname"
+                                            maxlength="30" required>@mail.ube.ac.kr
+                                    </span>
+                                    <span class="idch01"><a onclick="checkDuplicate()" class="btn_st_10">중복확인</a></span>
+                                </p>
+                            </li>
+                            <li style="list-style: none;" class="line">
+                                <label for="name">이름</label>
+                                <p>
+                                    <input type="text" id="displayname" class="int2" name="displayname" maxlength="20"
+                                        required>
+                                </p>
+                            </li>
+                            <li style="list-style: none;" class="line">
+                                <label for="password">비밀번호</label>
+                                <p>
+                                    <input type="password" id="password" class="int4" name="password" maxlength="20"
+                                        required>
+                                </p>
+                            </li>
+                            <li style="list-style: none;" class="line">
+                                <label for="confirmPassword">비밀번호 확인</label>
+                                <p>
+                                    <input type="password" id="confirmpassword" class="int4" name="confirmpassword" maxlength="20"
+                                        required>
+                                </p>
+                            </li>
+
+                            <li>
+                                <input type="text" id="hackbun" class="int2" name="hackbun" maxlength="20" required>
+                            </li>
+                            <span id="userID" style="display: none;"></span>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="btn_area">
+                    <button type="button" onclick="saveToAD()" id="btnJoin" class="snip1535">
+                        <span>가입하기</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div id="loadingOverlay">
+            <div id="loadingSpinnerContainer">
+                <div id="loadingSpinner"></div>
+                <div id="loadingText">회원가입 중 입니다.
+                    <span>잠시만 기다려주세요.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./jsfile/checkduplicate.js"></script>
+    <script src="./jsfile/aduser.js"></script>
+    <script src="js/jquery-.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/anim.js"></script>
+    <script>
+        // URL에서 쿼리 파라미터 가져오기
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // 쿼리 파라미터에서 값 추출하기
+        const userID = urlParams.get('userID');
+        const divide = urlParams.get('divide');
+        const name = urlParams.get('name');
+
+        document.getElementById('userID').textContent = userID;
+
+        const hackbun = document.getElementById('hackbun');
+        hackbun.value = userID;
+
+    </script>
+</body>
+
+</html>
